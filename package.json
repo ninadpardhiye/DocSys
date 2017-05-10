@@ -1,6 +1,6 @@
 {
   "name": "DocSys",
-  "version": "2.0.4",
+  "version": "0.0.1",
   "description": "A simple MEAN application for Doctor's management",
   "keywords": [
     "angular2",
