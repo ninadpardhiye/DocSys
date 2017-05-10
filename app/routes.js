@@ -11,16 +11,7 @@
 
 // Define routes for the Node backend
 
-// Load our API routes for user authentication
-import authRoutes from './routes/_authentication.router.js';
-
-// Load our API routes for the `todo` component
-import todoRoutes from './routes/_todo.router.js';
-
-// Load our API routes for the `recipe` component
-import recipeRoutes from './routes/_recipe.router.js';
-
-export default (app, router, passport) => {
+export default (app, router) => {
 
   // ### Express Middlware to use for all requests
   router.use((req, res, next) => {
@@ -58,16 +49,7 @@ export default (app, router, passport) => {
 
   // #### Authentication routes
 
-  // Pass in our Express app and Router.
-  // Also pass in auth & admin middleware and Passport instance
-  authRoutes(app, router, passport, auth, admin);
-
   // #### RESTful API Routes
-
-  // Pass in our Express app and Router
-  todoRoutes(app, router);
-
-	recipeRoutes(app, router);
 
 	// All of our routes will be prefixed with /api
 	app.use('/api', router);

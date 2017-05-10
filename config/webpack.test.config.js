@@ -1,9 +1,3 @@
-// ```
-// @datatype_void
-// david.r.niciforovic@gmail.com
-// webpack.config.js may be freely distributed under the MIT license
-// ```
-
 var helpers = require('./helpers');
 //# Webpack Plugins
 var ProvidePlugin = require('webpack/lib/ProvidePlugin');

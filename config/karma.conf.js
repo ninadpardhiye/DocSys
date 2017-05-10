@@ -1,5 +1,3 @@
-// @datatype_void
-
 module.exports = function(config) {
 
   var testWebpackConfig = require('./config/webpack.test.config.js');

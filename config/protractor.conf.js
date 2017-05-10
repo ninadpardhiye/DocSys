@@ -1,4 +1,3 @@
-// @datatype_void
 require('ts-node/register');
 
 exports.config = {

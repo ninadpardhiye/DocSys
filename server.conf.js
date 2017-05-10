@@ -46,7 +46,7 @@ import bodyParser from 'body-parser';
 // Simulate DELETE and PUT (Express 4)
 import methodOverride from 'method-override';
 // PassportJS
-import passport from 'passport';
+// import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 
@@ -67,10 +67,10 @@ import mongooseConf from './config/mongoose.conf.js';
 mongooseConf(mongoose);
 
 // Import PassportJS configuration
-import passportConf from './config/passport.conf.js';
+// import passportConf from './config/passport.conf.js';
 
 // Pass Passport configuration our PassportJS instance
-passportConf(passport);
+// passportConf(passport);
 
 if (process.env.NODE_ENV === 'development' ||
     process.env.NODE_ENV === 'test')
@@ -106,10 +106,10 @@ app.use(session({
   saveUninitialized : true
 }));
 
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 // Persistent login sessions
-app.use(passport.session());
+// app.use(passport.session());
 
 // ## Routes
 
@@ -121,7 +121,7 @@ let router = express.Router();
 import routes from './app/routes';
 
 // Pass in instances of the express app, router, and passport
-routes(app, router, passport);
+routes(app, router);
 
 // ### Ignition Phase
 

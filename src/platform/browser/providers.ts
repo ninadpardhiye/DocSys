@@ -14,7 +14,7 @@ import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 
 // Angular 2 Material 2
 //
-// TODO:(datatypevoid): replace with @angular2-material/all
+// TODO: replace with @angular2-material/all
 import {MATERIAL_PROVIDERS} from './angular2-material2'
 
 //# Application Providers/Directives/Pipes

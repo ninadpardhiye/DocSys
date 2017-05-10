@@ -1,9 +1,3 @@
-// ```
-// @datatype_void
-// david.r.niciforovic@gmail.com
-// webpack.prod.js may be freely distributed under the MIT license
-// ```
-
 //# Common Configuration and Helpers
 var helpers = require('./helpers');
 // Use `webpack-merge` to merge configs

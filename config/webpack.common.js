@@ -1,9 +1,3 @@
-// ```
-// @datatype_void
-// david.r.niciforovic@gmail.com
-// webpack.common.js may be freely distributed under the MIT license
-// ```
-
 var webpack = require('webpack');
 var helpers = require('./helpers');
 
@@ -16,7 +10,7 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular 2 MEAN Webpack Starter Kit by @datatype_void',
+  title: 'DocSys',
   baseUrl: '/',
   host: process.env.HOST || '0.0.0.0',
   port: process.env.PORT || 8080,

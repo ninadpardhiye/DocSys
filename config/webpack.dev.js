@@ -1,9 +1,3 @@
-// ```
-// @datatype_void
-// david.r.niciforovic@gmail.com
-// webpack.dev.js may be freely distributed under the MIT license
-// ```
-
 //# Common Configuration and Helpers
 var helpers = require('./helpers');
 // Use `webpack-merge` to merge configs
@@ -75,7 +69,7 @@ module.exports = webpackMerge(commonConfig, {
   // See: http://webpack.github.io/docs/configuration.html#plugins
   plugins: [
 
-    // TODO(datatypevoid): investigate the necessity of these two
+    // TODO: investigate the necessity of these two
     // following lines
     new HotModuleReplacementPlugin(),
     new NoErrorsPlugin(),

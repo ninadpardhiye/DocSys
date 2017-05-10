@@ -8,9 +8,7 @@
 # THANKS
 
   <name>
-  David Newman -- @datatype_void
-  PatrickJS -- @gdi2290
-  AngularClass -- @AngularClass
+  DocSys
 
 # TECHNOLOGY COLOPHON
 
