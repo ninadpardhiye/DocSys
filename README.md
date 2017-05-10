@@ -1,119 +1,11 @@
-[![Dependency Status](https://david-dm.org/datatypevoid/vulgar.svg)](https://david-dm.org/datatypevoid/vulgar) [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://travis-ci.org/datatypevoid/vulgar) [![GitHub tag](https://img.shields.io/github/tag/datatypevoid/vulgar.svg?maxAge=2592000)](https://github.com/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/pr?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Issue Stats](http://issuestats.com/github/datatypevoid/vulgar/badge/issue?style=flat)](http://issuestats.com/github/datatypevoid/vulgar) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](stackshare.io/datatypevoid/vulgar) [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
-
-[![MEAN with NG2 and Webpack](https://cloud.githubusercontent.com/assets/10481547/13732046/5ba42ab0-e94f-11e5-9962-ab04cbd6779f.png)](http://www.davidniciforovic.com)
-
-# v#!g@r [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation) [![Join the chat at https://gitter.im/datatypevoid/vulgar](https://badges.gitter.im/datatypevoid/vulgar.svg)](https://gitter.im/datatypevoid/vulgar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-## MEAN Stack Development Starter
-
-> A MEAN stack development kit featuring [Angular 2](https://angular.io) ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/), [Http](https://angular.io/docs/js/latest/api/http/), [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter), [Tests](https://angular.io/docs/js/latest/api/test/), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Express](http://expressjs.com/), [MongoDB](https://www.mongodb.org/) (complete with [Mongoose](https://www.mongoosejs.org/)), [Node](https://www.nodejs.org/), [Redux](https://egghead.io/series/getting-started-with-redux), [@ngrx/store](https://github.com/ngrx/store) [PassportJS](https://www.passportjs.org/), [Socket.IO](https://www.socket.io/), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [Configuration](#configuration), [TypeScript](http://www.typescriptlang.org/), [Typings](https://github.com/typings/typings), [Sass](https://sass-lang.com), [Docco](https://jashkenas.github.io/docco/), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), [Material](https://github.com/angular/material2), and [Webpack](http://webpack.github.io/), as well as ES6/ES7 support for the back-end by [datatype_void](https://twitter.com/datatype_void).
-
-> Walk through a complete tutorial that shows you how to build a simple todo app using this framework, check out [Building A Single Page Todo App with MEAN--Including Angular 2](http://www.davidniciforovic.com/2016/02/03/building-a-single-page-todo-app-with-mean-including-angular-2/)
-
-> If you're looking to learn about Webpack and ES6 Build Tools check out [ES6-build-tools](https://github.com/AngularClass/ES6-build-tools)
-
-> If you're looking to learn TypeScript see [TypeStrong/learn-typescript](https://github.com/TypeStrong/learn-typescript)
-
-> If you're looking to learn how to move your Angular 1.x directives over to Angular 2 see [Migrating Directives to Angular 2](http://angular-tips.com/blog/2015/09/migrating-directives-to-angular-2/)
-
-> And always keep the [Angular 2 docs](https://angular.io/docs/ts/latest/) at hand, because the times are always changing
-
-This seed repo serves as an MEAN starter for anyone looking to get a MEAN fullstack app up and running with Angular 2, TypeScript(on the front-end), and ES6/ES7 (on the back-end) fast. Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
-
-- Best practices in file and application organization for Angular 2.
-- Ready to go build system using Webpack for working with TypeScript.
-- Hot module reloading for the front-end à la Webpack.
-- Angular 2 examples that are ready to go when experimenting with Angular 2.
-- A great MEAN seed repo for anyone who wants to start their project.
-- Testing Angular 2 code with Jasmine and Karma.
-- Coverage with Istanbul and Karma
-- End-to-end Angular 2 code using Protractor.
-- Type manager with Typings
-- Material Design with [angular/material2](https://github.com/angular/material2)
-- Sass preprocessor linting and compiling
-- Automatic documentation for all project related Sass, TypeScript, and JavaScript files with Docco; front-end and back-end
-
-The rest of the stack features:
-
-- [Express](https://www.expressjs.com/) ready for ES6/ES7 code through transpiling with [Babel 6](https://babeljs.io/),
-- [Socket.io](https://www.socket.io/) for real time event-based communication.
-- [Mongoose](https://www.mongoosejs.com/) for modeling [MongoDB](https://www.mongodb.org) objects within [NodeJS](https://nodejs.org).
-- Support for the [Sass](https://sass-lang.com) CSS preprocessor.
-
-## Quick start
-
-**Make sure you have Node version >= 4.0 and NPM >= 3**
-
-### If you are located in China, use `cnpm`
-
-#### <https://github.com/cnpm/cnpm>
-
-> Install the stack then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
-
-```bash
-# install vulgar-cli and the generator it hooks into
-$ npm install -g vulgar-cli generator-vulgar
-
-# initialize installer
-$ vulgar init <nameOfApplication>
-
-# change directory to new application root
-$ cd <nameOfApplication>
-
-# add required global libraries
-$ npm install -g typings webpack webpack-dev-server concurrently
-
-# install the repo with npm
-# required only if you declined automated dependency installation
-# during installation
-$ npm install
-
-# build code
-$ npm run build
-
-# start up the stack
-
-# this command runs two commands in parallel via `concurrently`:
-# `npm run server` starts up `webpack-dev-server` allowing for
-# hot module reloading
-# `npm` run watch` uses `webpack` to watch the necessary files
-# and build on file change
-$ npm start
-
-# in a separate terminal:
-# start `Express` server
-$ gulp serve
-```
-
-go to <http://0.0.0.0:8080> or <http://localhost:8080> in your browser
-
-# Table of Contents
-
-- [File Structure](#file-structure)
-- [Getting Started](#getting-started)
-
-  - [Dependencies](#dependencies)
-  - [Installing](#installing)
-  - [Running the app](#running-the-app)
-
-- [Contributing](#contributing)
-
-- [TypeScript](#typescript)
-
-- [Typings](#typings)
-
-- [Frequently asked questions](#frequently-asked-questions)
-
-- [Support, Questions, or Feedback](#support-questions-or-feedback)
-
-- [License](#license)
+# A simple MEAN application for Doctor's management
 
 ## File Structure
 
 We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
 
 ```
-vulgar/
+DocSys/
  │
  ├──app/                            * back-end routing and MongoDB object models
  │   ├──models/                     * model definitions for Mongoose
@@ -151,13 +43,18 @@ vulgar/
  │   │
  |   ├──vendor.ts                   * our vendor file
  │   │
+ |   ├──directives/                 * Custom directives folder
+ │   │   └──(Directive name)/                   * an example directive directory
+ │   │       ├──(Directive name).ts             * a simple Angular 2 custom directive
+ │   │       └──(Directive name).html           * template for our custom directive
+ │   │
  │   ├──app/                        * WebApp: folder
- │   │   ├──todo/                   * an example component directory
- │   │   │   ├──todo.component.ts   * a simple Angular 2 component
- │   │   │   ├──todo.e2e.ts         * simple test of components in todo.component.ts
- │   │   │   ├──todo.spec.ts        * a simple end-to-end test for /todo
- │   │   │   ├──todo.html           * template for our component
- │   │   │   └──todo.service.ts     * Angular 2 service linking to our API
+ │   │   ├──(Component name)/                   * an example component directory
+ │   │   │   ├──(Component name).component.ts   * a simple Angular 2 component
+ │   │   │   ├──(Component name).e2e.ts         * simple test of components in (Component name).component.ts
+ │   │   │   ├──(Component name).spec.ts        * a simple end-to-end test for /(Component name)
+ │   │   │   ├──(Component name).html           * template for our component
+ │   │   │   └──(Component name).service.ts     * Angular 2 service linking to our API
  │   │   ├──app.spec.ts             * a simple test of components in app.ts
  │   │   ├──app.e2e.ts              * a simple end-to-end test for /
  │   │   └──app.ts                  * App.ts: primary application component
@@ -251,42 +148,9 @@ vulgar/
 
 # Getting Started
 
-## Prerequisite Technologies
-
-### What you need to run this app:
-
-### Linux
-
-- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials](http://nodeschool.io/#workshoppers) to get you started.
-- _MongoDB_ - [Download](https://www.mongodb.org/downloads) and Install mongodb - [Checkout their manual](https://docs.mongodb.org/manual/) if you're just starting.
-
-If you're using ubuntu, this is the preferred repository to use...
-
-```bash
-$ curl -sL https://deb.nodesource.com/setup | sudo bash -
-$ sudo apt-get update
-$ sudo apt-get install nodejs
-```
-
-or use [Node Version Manager](https://github.com/creationix/nvm) to easily manage and update your `node` installations and global dependencies
-
-### Windows
-
-- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js, nodeschool has free [node tutorials](http://nodeschool.io/#workshoppers) to get you started.
-- _MongoDB_ - Follow the great tutorial from the mongodb site - ["Install Mongodb On Windows"](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
-- _Git_ - The easiest way to install git and then run the rest of the commands through the _git bash_ application (via command prompt) is by downloading and installing [Git for Windows](http://git-scm.com/download/win)
-
-### OSX
-
-- _Node.js_ - [Download](http://nodejs.org/download/) and Install Node.js or use the packages within brew or macports.
-- _MongoDB_ - Follow the tutorial here - [Install mongodb on OSX](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
-- _git_ - Get git [from here](http://git-scm.com/download/mac).
-
-### _Ensure you are running the latest versions Node `v4.x.x`+ and NPM `3.x.x`+_
-
 ## Dependencies
 
-Once you have those, you should install these globals with `npm install --global`:
+Once you have the latest versions of Node 6.x.x and NPM 3.x.x, you should install these globals with `npm install --global`:
 
 - `webpack` (`$ npm install --global webpack`)
 - `webpack-dev-server` (`$ npm install --global webpack-dev-server`)
@@ -299,8 +163,7 @@ Once you have those, you should install these globals with `npm install --global
 
 ## Installing
 
-- `$ npm install -g vulgar-cli generator-vulgar`
-- `$ vulgar init` to install a new instance of the v#!g@r `MEAN` stack framework
+- `$ git clone https://github.com/ninadpardhiye/DocSys.git` Clone the repo to your local machine
 - `$ npm install -g typings webpack webpack-dev-server concurrently rimraf` to install global dependencies
 - `$ npm install` to install all local dependencies
 - `$ typings install` to install necessary typings
@@ -351,39 +214,9 @@ $ npm start
 # use `Gulp` in a second terminal to run the Express
 # app responsible for our back-end
 $ gulp serve
-# optionally use `Gulp` in a third terminal to auto
-# generate documentation and lint `Sass`
-$ gulp
-
 # production
 $ npm run build:prod
 $ npm run server:prod
-```
-
-## Other commands
-
-### start `Express` back-end
-
-```bash
-$ gulp serve
-```
-
-### build documentation
-
-```bash
-$ gulp build:docs
-```
-
-### watch and build documentation
-
-```bash
-$ gulp watch:docs
-```
-
-### watch and lint sass
-
-```bash
-$ gulp watch:sass
 ```
 
 ### build files
@@ -393,12 +226,6 @@ $ gulp watch:sass
 $ npm run build:dev
 # production
 $ npm run build:prod
-```
-
-### watch and build files
-
-```bash
-$ npm run watch
 ```
 
 ### run tests
@@ -438,165 +265,3 @@ $ npm run e2e:live
 # Configuration
 
 Configuration files live in `config/`. We are currently using `mongooose`, `passportJS`, `webpack`, `mocha`, `karma`, and `protractor` for different stages and parts of your full-stack application
-
-# Contributing
-
-Contibutors are welcome. If you are interested in collaborating with us or contributing to this project, please join our chat on [Slack](http://www.davidniciforovic.com/wp-login.php?action=slack-invitation). You can also view our `Trello` board which is where the roadmap and task backlog live here <https://trello.com/b/Kk4qnt2T/vulgar>
-
-# TypeScript
-
-> To take full advantage of TypeScript with autocomplete you would have to install it globally and use an editor with the correct TypeScript plugins.
-
-## Use latest TypeScript compiler
-
-TypeScript 1.7.x includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.
-
-```
-$ npm install --global typescript
-```
-
-## Use a TypeScript-aware editor
-
-We have good experience using these editors:
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
-- [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
-- [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
-
-# Typings
-
-> When you include a module that doesn't include Type Definitions inside of the module you need to include external Type Definitions with Typings
-
-## Use latest Typings module
-
-```
-$ npm install --global typings
-```
-
-## Custom Type Definitions
-
-When including 3rd party modules you also need to include the type definition for the module if they don't provide one within the module. You can try to install it with typings
-
-```
-$ typings install node --save
-```
-
-If you can't find the type definition in the registry we can make an ambient definition in this file for now. For example
-
-```typescript
-declare module "my-module" {
-  export function doesSomething(value: string): string;
-}
-```
-
-If you're prototyping and you will fix the types later you can also declare it as type any
-
-```typescript
-declare var assert: any;
-```
-
-If you're importing a module that uses Node.js modules which are CommonJS you need to import as
-
-```typescript
-import * as _ from 'lodash';
-```
-
-You can include your type definitions in this file until you create one for the typings registry see [typings/registry](https://github.com/typings/registry)
-
-# Frequently asked questions
-
-- What's the current browser support for Angular 2 Beta?
-
-  - Please view the updated list of [browser support for Angular 2](https://github.com/angularclass/awesome-angular2#current-browser-support-for-angular-2)
-
-- Why is my service, aka provider, is not injecting parameter correctly?
-
-  - Please use `@Injectable()` for your service for typescript to correctly attach the metadata (this is a TypeScript problem)
-
-- How do I run protractor with node 0.12.x?
-
-  - please check out this repo to use the old version of protractor [#146](https://github.com/AngularClass/angular2-webpack-starter/pull/146/files)
-
-- Where do I write my tests?
-
-  - You can write your tests next to your component files. See [`/src/app/home/home.spec.ts`](/src/app/home/home.spec.ts)
-
-- How do I start the app when I get `EACCES` and `EADDRINUSE` errors?
-
-  - The `EADDRINUSE` error means the port `8080` is currently being used and `EACCES` is lack of permission for webpack to build files to `./dist/`
-
-- How to use `sass` for css?
-
-  - `loaders: ['raw-loader','sass-loader']` and `@Component({ styles: [ require('./filename.scss') ] })` see issue [#136](https://github.com/AngularClass/angular2-webpack-starter/issues/136) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- How do I test a Service?
-
-  - See issue [#130](https://github.com/AngularClass/angular2-webpack-starter/issues/130#issuecomment-158872648)
-
-- How do I add `vscode-chrome-debug` support?
-
-  - The VS Code chrome debug extension support can be done via `launch.json` see issue [#144](https://github.com/AngularClass/angular2-webpack-starter/issues/144#issuecomment-164063790) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- How do I make the repo work in a virtual machine?
-
-  - You need to use `0.0.0.0` so revert these changes [#205](https://github.com/AngularClass/angular2-webpack-starter/pull/205/files) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- What are the naming conventions for Angular 2?
-
-  - please see issue [#185](https://github.com/AngularClass/angular2-webpack-starter/issues/185) and PR [196](https://github.com/AngularClass/angular2-webpack-starter/pull/196) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- How do I include bootstrap or jQuery?
-
-  - please see issue [#215](https://github.com/AngularClass/angular2-webpack-starter/issues/215) and [#214](https://github.com/AngularClass/angular2-webpack-starter/issues/214#event-511768416) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- I'm getting an error about not finding my module that I installed?
-
-  - please see [How to include or create custom type definitions](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-include-or-create-custom-type-definitions) and [custom-typings.d.ts](https://github.com/AngularClass/angular2-webpack-starter/blob/master/src/custom-typings.d.ts) from the [Angular 2 Webpack Starter Kit](https://github.com/AngularClass/angular2-webpack-starter)
-
-- How do I async load a component?
-
-  - { path: '/about', loader: () => require('es6-promise!./about/about')('About') }
-  - Also see [es6-promise-loader](https://github.com/gdi2290/es6-promise-loader)
-
-- Error: Cannot find module 'tapable'
-
-  - Remove `node_modules/` and run `npm cache clean` then `npm install`
-
-- `RangeError: Maximum call stack size exceeded`
-
-  - This is a problem with minifying Angular 2 and it's recent JIT templates. If you set `mangle` to `false` then you should be good.
-
-- Why is the size of my app larger in development?
-
-  - We are using inline source-maps and hot module replacement which will increase the bundle size.
-
-- If you are located in China, use `cnpm`
-
-  - <https://github.com/cnpm/cnpm>
-
-- node-pre-gyp ERR in npm install (Windows)
-
-  - install `Python x86` version between `2.5` and `3.0` on Windows machines
-
-## Acknowledgements
-
-> [AngularClass](https://github.com/AngularClass) for their Angular 2 Webpack repo which served as a starting point for the front-end
-
-# Support, Questions, or Feedback
-
-> Contact us anytime for anything about this repo, Angular 2, or MEAN stack development in general.
-
-- [Twitter: @datatype_void](https://twitter.com/datatype_void)
-
---------------------------------------------------------------------------------
-
-enjoy -- **Da5id**
-
-<br><br>
-
-> Looking for corporate Angular/MEAN training, want to host us, or Angular/MEAN consulting? david.r.niciforovic@gmail.com
-
-# License
-
-[MIT](/LICENSE)
