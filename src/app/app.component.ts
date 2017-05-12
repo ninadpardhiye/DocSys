@@ -18,6 +18,8 @@ import {RouteConfig, Router} from '@angular/router-deprecated';
 
 import {AppState} from './app.service';
 
+import { Home } from './home'
+
 // Import NgFor directive
 import {NgFor} from '@angular/common';
 
@@ -34,12 +36,14 @@ import {NgFor} from '@angular/common';
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
   template: `
-    <md-content>
-      Index is running
-    </md-content>
+    <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
+      </md-progress-bar>
+      <router-outlet></router-outlet>
   `
 })
 @RouteConfig([
+  { path: '/', name: 'Index', component: Home, useAsDefault: true },
+  { path: '/home',  name: 'Home',  component: Home },
 ])
 export class App {
   // Pass in our application `state`
