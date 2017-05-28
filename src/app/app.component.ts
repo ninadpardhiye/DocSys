@@ -17,9 +17,11 @@ import {Component, ViewEncapsulation} from '@angular/core';
 import {RouteConfig, Router} from '@angular/router-deprecated';
 
 import {AppState} from './app.service';
+import {SocketService} from './Services/socket.service';
 
-import { Home } from './home'
-
+import {Home} from './Home/home.component';
+import {Medicines} from './Medicine/medicine.component';
+import {Inventories} from './Inventory/inventory.component';
 // Import NgFor directive
 import {NgFor} from '@angular/common';
 
@@ -29,26 +31,32 @@ import {NgFor} from '@angular/common';
  */
 @Component({
   selector: 'app',
-  providers: [  ],
+  providers: [ SocketService ],
   directives: [NgFor],
   encapsulation: ViewEncapsulation.None,
   pipes: [],
   // Load our main `Sass` file into our `app` `component`
   styleUrls: [require('!style!css!sass!../sass/main.scss')],
   template: `
-    <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
+    <md-content>
+    
+      <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading">
       </md-progress-bar>
+
       <router-outlet></router-outlet>
+
+    </md-content>
   `
 })
 @RouteConfig([
-  { path: '/', name: 'Index', component: Home, useAsDefault: true },
-  { path: '/home',  name: 'Home',  component: Home },
+  { path: '/home', name: 'Home', component: Home, useAsDefault: true },
+  { path: '/medicines', name: 'Medicines', component: Medicines},
+  { path: '/inventories', name: 'Inventories', component: Inventories}
 ])
 export class App {
   // Pass in our application `state`
   // Alternative to using `redux`
-  constructor(public appState: AppState) {}
+  constructor(public appState: AppState, private socketService: SocketService) {}
 
   // Fire off upon initialization
   ngOnInit() {

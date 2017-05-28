@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            List of all Medicines
+        </h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Product Name
+                    </th>
+                    <th>
+                        Purchase Date
+                    </th>
+                    <th>
+                        Expiry Date
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let inventory of inventories | async">
+                    <td>
+                        {{getMedicine(inventory.medicineId).name}}
+                    </td>
+                    <td>
+                        {{inventory.purchaseDate}}
+                    </td>
+                    <td>
+                        {{inventory.expiryDate}}
+                    </td>
+                    <td>
+                        {{inventory.quantity}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
