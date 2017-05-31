@@ -11,7 +11,13 @@
 
 // Define routes for the Node backend
 
-export default (app, router) => {
+// Load our API routes for the `medicine` component
+import medicineRoutes from './routes/_medicine.router.js';
+
+// Load our API routes for the `inventory` component
+import inventoryRoutes from './routes/_inventory.router.js';
+
+export default (app, router, io) => {
 
   // ### Express Middlware to use for all requests
   router.use((req, res, next) => {
@@ -50,6 +56,8 @@ export default (app, router) => {
   // #### Authentication routes
 
   // #### RESTful API Routes
+  medicineRoutes(app, router, io);
+  inventoryRoutes(app, router);
 
 	// All of our routes will be prefixed with /api
 	app.use('/api', router);
